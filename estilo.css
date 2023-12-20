@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background: linear-gradient(#8a5de8, #2ed573);
+
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    background: linear-gradient(#8a5de8);
+
+    /* Color de fondo del header */
+    padding: 10px 0;
+    /* Ajustar el espaciado superior e inferior del header */
+    text-align: center;
+    z-index: 1000;
+    /* Asegura que el header esté encima de otros elementos */
+}
+
+h1 {
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+
+
+
+
+section {
+    width: 70%;
+    max-width: 600px;
+    /* Establece un ancho máximo para evitar que se vuelva demasiado ancho en pantallas grandes */
+    margin: 20px auto;
+    /* Centra el contenedor horizontalmente y agrega espacio en la parte superior e inferior */
+    background-color: #fff;
+    border: 7px solid #ae91c5;
+    color: #333;
+    /* Color de texto oscuro para mejorar la legibilidad */
+    padding: 20px;
+    border-radius: 15px;
+    /* Añade bordes redondeados al contenedor */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar el contenedor */
+}
+
+h2 {
+    border-bottom: 2px solid #9b58d1;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #9b58d1;
+    /* Color de borde del título */
+}
+
+#palabra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite que las letras se envuelvan a la siguiente línea si no hay espacio suficiente */
+    margin: 20px 0;
+}
+
+.letra {
+    height: 50px;
+    width: 50px;
+    border: 2px solid #2ed573;
+    text-align: center;
+    margin: 4px;
+    font-weight: 600;
+    font-size: 24px;
+    /* Reducción del tamaño de la fuente para adaptarse mejor */
+    line-height: 50px;
+    border-radius: 8px;
+    /* Bordes redondeados para las letras */
+    transition: background-color 0.3s;
+    /* Agrega una transición suave al cambiar el color de fondo */
+}
+
+#letrasIngresadas {
+    font-size: 16px;
+    /* Ajusta el tamaño de la fuente según tus preferencias */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    /* Espacio en la parte superior para separar del resto del contenido */
+    color: #333;
+    /* Cambia el color según tu paleta de colores */
+}
+
+#letrasIngresadas span {
+    display: inline-block;
+    padding: 8px;
+    margin: 5px;
+    background-color: #02bfa4;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+#intentos,
+#ayuda {
+    font-size: 18px;
+    /* Ajusta el tamaño de la fuente según tus preferencias */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    /* Añade espacio en la parte inferior para separar del resto del contenido */
+}
+
+#intentos {
+    color: #ff7e5f;
+    /* Color específico para el número de intentos */
+}
+
+#ayuda {
+    color: #02bfa4;
+    /* Color específico para la ayuda */
+    font-style: italic;
+}
+
+
+.pintar {
+    background-color: #02bfa4;
+}
+
+.pintarError {
+    background-color: red;
+}
+
+
+
+button {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    background-color: #4CAF50;
+    /* Un verde más vibrante, ajusta según tu preferencia */
+    border: 2px solid #4CAF50;
+    /* Mismo color del borde que el fondo para un estilo más limpio */
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    /* Ligeramente aumentado el tamaño de la fuente */
+    padding: 12px 20px;
+    /* Ajustado el relleno para un aspecto más proporcionado */
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+button:hover {
+    background-color: #45a049;
+    /* Un tono más oscuro en el hover para un efecto visual agradable */
+}
+
+
+
+
+footer {
+    background-color: #4d2b6a;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffd700;
+    /* Cambia el color al pasar el ratón */
+}
+
+
+/* Estilos para dispositivos grandes (PCs, tablets en orientación horizontal, etc.) */
+
+@media screen and (min-width: 768px) {
+    section {
+        width: 50%;
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    #palabra {
+        margin: 20px 0;
+    }
+
+    .letra {
+        height: 40px;
+        width: 40px;
+        font-size: 20px;
+    }
+
+    #intentos,
+    #ayuda {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 12px 20px;
+        margin-top: 20px;
+    }
+}
+
+/* Estilos para dispositivos pequeños (móviles) */
+
+@media screen and (max-width: 767px) {
+    section {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .letra {
+        height: 30px;
+        width: 30px;
+        font-size: 16px;
+    }
+
+    #intentos,
+    #ayuda {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-top: 20px;
+    }
+}
