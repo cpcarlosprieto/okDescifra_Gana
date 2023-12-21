@@ -167,7 +167,7 @@ cargarNuevaPalabra();
 // Detecto el evento de entrada de texto en tiempo real
 document
   .getElementById("inputLetra")
-  .addEventListener("input", verificarCadenaEnTiempoReal);
+  .addEventListener("keyup", verificarCadenaEnTiempoReal);
 
 // Función que verifica la cadena ingresada en tiempo real
 function verificarCadenaEnTiempoReal() {
